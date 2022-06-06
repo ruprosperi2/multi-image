@@ -7,6 +7,7 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
+  DOCKER_COMPOSE: docker-compose.yaml
 
 jobs:
   build-and-push-image:
@@ -35,5 +36,5 @@ jobs:
       - name: Build and push Docker images
         uses: pennsignals/publish_docker-compose@v0.1.0
         with:
-          docker_compose: 'docker-compose.yaml'
+          docker_compose: ${{ env.DOCKER_COMPOSE }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
