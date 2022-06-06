@@ -43,3 +43,5 @@ jobs:
         with:
           docker_compose: ${{ env.DOCKER_COMPOSE }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
