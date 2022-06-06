@@ -29,8 +29,8 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: 🕸 Create shared network
-        run: make create-shared-network
+      - name: Create shared network
+        run: docker network create pensa-network
 
       - name: Extract metadata (tags, labels) for Docker
         id: meta
