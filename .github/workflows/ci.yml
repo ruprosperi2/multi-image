@@ -7,11 +7,8 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
-  DB: flexio
-  USERDB: flexioUser
-  DOCKER_PASSDB: FlexioPass.
   DOCKER_COMPOSE: docker-compose.yaml
-  ENC_KEY: def000000c4f0efd7e959c55824545d243a48272e8e6ba6f91d61479b04c3b52ca0b72d7564713c34340078a4ee2e98813a4e9d542bab151b69b5ea850486d27467ce9d8
+
 
 
 jobs:
